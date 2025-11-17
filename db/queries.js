@@ -39,10 +39,30 @@ async function initializeTypesAndItems() {
         ('Coiled Nail', 1), ('Pure Nail', 1), ('Needle', 2), ('Sharpened Needle', 2),
         ('Shining Needle', 2), ('Hivesteel Needle', 2), ('Pale Steel Needle', 2),
         ('Multi-Binder', 3), ('Flea Brew', 3), ('Plasmium Phial', 3),
-        ('Straigtht Pin', 3), ('Polip Pouch', 3), ('Unbreakable Strength', 4),
+        ('Straight Pin', 3), ('Polip Pouch', 3), ('Unbreakable Strength', 4),
         ('Quick Slash', 4), ('Mark of Pride', 4), ('Quick Focus', 4), ('Grubsong', 4);
         `
     );
 }
 
-export default { getInventory, initializeDatabase, initializeTypesAndItems };
+async function getTypes() {
+    const { rows } = await pool.query(`
+        SELECT * FROM types;
+        `);
+    return rows;
+}
+
+async function getItems() {
+    const { rows } = await pool.query(`
+        SELECT * FROM items;
+        `);
+    return rows;
+}
+
+export default {
+    getInventory,
+    initializeDatabase,
+    initializeTypesAndItems,
+    getTypes,
+    getItems,
+};

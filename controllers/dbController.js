@@ -1,3 +1,4 @@
+import { get } from "node:http";
 import db from "../db/queries.js";
 
 async function getInventory(req, res) {
@@ -6,7 +7,9 @@ async function getInventory(req, res) {
 
 async function initializeDatabase(req, res) {
     await db.initializeDatabase();
-    console.log("database intialized");
+    console.log(
+        "database intialized - (ignore if database was already initialized)"
+    );
 }
 
 async function initializeTypesAndItems(req, res) {
@@ -14,4 +17,18 @@ async function initializeTypesAndItems(req, res) {
     console.log("Initialized types and items");
 }
 
-export default { getInventory, initializeDatabase, initializeTypesAndItems };
+async function getTypes(req, res) {
+    return await db.getTypes();
+}
+
+async function getItems(req, res) {
+    return await db.getItems();
+}
+
+export default {
+    getInventory,
+    initializeDatabase,
+    initializeTypesAndItems,
+    getTypes,
+    getItems,
+};

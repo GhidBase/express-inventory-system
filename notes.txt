@@ -22,6 +22,14 @@ Types fields:
 -id
 -name
 
+The types and items are setup
 
-Current To-Do:
-Set up the three types: Nails, Pins, and Tools
+Current ToDo:
+Write a function that
+-pulls all the items
+-creates an object with each type as a key
+-each value is an array of the items that have that type
+
+First I'll need a function that
+-pulls all the types
+-stores them in an object with the id as key
