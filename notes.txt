@@ -1,0 +1,13 @@
+Inventory system:
+
+Hollownest and Pharloom Merchant Database
+Pins, Needles, and Tools for sale
+
+Tables:
+-Inventory
+-Items
+-Types
+
+Current To-Do:
+Add a / route
+The homepage will show the inventory
