@@ -22,3 +22,6 @@ Types fields:
 -id
 -name
 
+
+Current To-Do:
+Set up the three types: Nails, Pins, and Tools

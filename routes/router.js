@@ -8,4 +8,10 @@ router.get("/", (req, res) => {
     res.send("hi");
 });
 
+router.get("/setup", (req, res) => {
+    dbController.initializeTypesAndItems();
+    console.log("ran setup - check Neon database");
+    res.redirect("/");
+});
+
 export default router;
