@@ -8,6 +8,17 @@ Tables:
 -Items
 -Types
 
-Current To-Do:
-Add a / route
-The homepage will show the inventory
+Inventory fields:
+-id
+-itemId
+-quantity
+
+Items fields:
+-id
+-name
+-typeId
+
+Types fields:
+-id
+-name
+

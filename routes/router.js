@@ -3,7 +3,8 @@ const router = Router();
 import dbController from "../controllers/dbController.js";
 
 router.get("/", (req, res) => {
-    console.log("test");
+    dbController.initializeDatabase();
+    console.log("Loaded the homepage");
     res.send("hi");
 });
 
